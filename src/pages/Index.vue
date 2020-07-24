@@ -1,5 +1,8 @@
 <template>
     <div>
+        <button @click="gotoHome">go to Home</button>
+    </div>
+    <div>
         <button @click="add">add</button>
         <h1>count:{{count}}</h1>
         <button @click="changeTime">change Time</button>
@@ -23,9 +26,11 @@
 
 <script lang="ts">
     import {ref, reactive, toRefs, computed, watch, watchEffect} from "vue";
+    import {useRouter} from "vue-router";
     export default {
         name: "Index",
-        setup() {
+        setup(props: any, ctx: any) {
+            const router = useRouter();
             const count = ref<number>(0);
             const count2 = ref<{a: number}>({a: 1});
             const count3 = reactive<{b: number, c: number}>({
@@ -50,6 +55,10 @@
             watchEffect(() => {
                 console.log('依赖变化了----', time.value, '--------',count.value);
             });
+
+            const gotoHome = () => {
+                router.push({name: 'Home', path: '/home', query: {id: 666687}});
+            }
             return {
                 count,
                 add,
@@ -58,7 +67,8 @@
                 ...toRefs(count3),
                 count4: computed(() => count.value**2),
                 time,
-                changeTime
+                changeTime,
+                gotoHome
             }
         }
     }
