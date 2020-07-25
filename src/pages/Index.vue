@@ -22,14 +22,19 @@
     <div>
         <h1>computed -> count4: {{count4}}</h1>
     </div>
+    <div>
+        <h1>store.count: {{storeCount}}</h1>
+    </div>
 </template>
 
 <script lang="ts">
     import {ref, reactive, toRefs, computed, watch, watchEffect} from "vue";
     import {useRouter} from "vue-router";
+    import {useStore} from "vuex";
     export default {
         name: "Index",
         setup(props: any, ctx: any) {
+            const store = useStore();
             const router = useRouter();
             const count = ref<number>(0);
             const count2 = ref<{a: number}>({a: 1});
@@ -68,7 +73,8 @@
                 count4: computed(() => count.value**2),
                 time,
                 changeTime,
-                gotoHome
+                gotoHome,
+                storeCount: computed(() => store.state.count)
             }
         }
     }

@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router'
+import store from "./store"
 import App from './App.vue'
 import Index from './pages/Index.vue'
 import './index.css'
@@ -26,4 +27,4 @@ const router = createRouter({
     routes
 });
 
-createApp(App).use(router).mount('#app');
+createApp(App).use(router).use(store).mount('#app');
