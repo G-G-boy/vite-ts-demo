@@ -3,6 +3,8 @@ import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router'
 import store from "./store"
 import App from './App.vue'
 import Index from './pages/Index.vue'
+import antd from 'ant-design-vue';
+import 'ant-design-vue/dist/antd.css'
 import './index.css'
 
 const routes: RouteRecordRaw[] = [
@@ -27,4 +29,4 @@ const router = createRouter({
     routes
 });
 
-createApp(App).use(router).use(store).mount('#app');
+createApp(App).use(router).use(store).use(antd).mount('#app');
