@@ -10,8 +10,8 @@ export default createStore<{count: number}>({
         },
         decrement(state) {
             state.count--;
-        }
+        },
     },
     actions: {},
-    modules: {}
+    modules: {},
 });

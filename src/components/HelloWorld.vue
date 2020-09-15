@@ -3,21 +3,17 @@
 </template>
 
 <script lang="ts">
-
-
     export default {
         name: 'HelloWorld',
         props: {
-            msg: String
+            msg: String,
         },
-        setup(props: any) {
-
-        }
-    }
+        setup(props: any) {},
+    };
 </script>
 
 <style scoped>
-  .title {
-    color: aquamarine;
-  }
+    .title {
+        color: aquamarine;
+    }
 </style>

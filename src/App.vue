@@ -1,18 +1,16 @@
 <template>
-    <HelloWorld msg="Hello Vue 3.0 + Vite"/>
-    <router-view/>
+    <HelloWorld msg="Hello Vue 3.0 + Vite" />
+    <router-view />
 </template>
 
 <script lang="ts">
-    import HelloWorld from "./components/HelloWorld.vue";
+    import HelloWorld from './components/HelloWorld.vue';
 
     export default {
-        name: "App",
+        name: 'App',
         components: {
-            HelloWorld
+            HelloWorld,
         },
-        setup(props: any, ctx: any) {
-
-        }
+        setup(props: any, ctx: any) {},
     };
 </script>
