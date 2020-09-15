@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-    import {computed, watchEffect, watch, ref} from 'vue';
+    import {computed, watchEffect, watch} from 'vue';
     import {useRouter, useRoute} from 'vue-router';
     import {useStore} from 'vuex';
 

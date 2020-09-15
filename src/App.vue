@@ -11,6 +11,5 @@
         components: {
             HelloWorld,
         },
-        setup(props: any, ctx: any) {},
     };
 </script>

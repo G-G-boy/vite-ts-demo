@@ -6,9 +6,11 @@
     export default {
         name: 'HelloWorld',
         props: {
-            msg: String,
+            msg: {
+                type: String,
+                default: 'aaa',
+            },
         },
-        setup(props: any) {},
     };
 </script>
 

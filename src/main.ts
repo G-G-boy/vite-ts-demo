@@ -1,9 +1,9 @@
 import {createApp} from 'vue';
 import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router';
+import antd from 'ant-design-vue';
 import store from './store';
 import App from './App.vue';
 import Index from './pages/Index.vue';
-import antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 import './index.css';
 
