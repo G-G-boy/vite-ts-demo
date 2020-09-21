@@ -34,7 +34,7 @@
 
     export default {
         name: 'Index',
-        setup(props: any, ctx: any) {
+        setup() {
             const store = useStore();
             const router = useRouter();
             const count = ref<number>(0);
