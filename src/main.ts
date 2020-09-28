@@ -4,18 +4,24 @@ import antd from 'ant-design-vue';
 import store from './store';
 import App from './App.vue';
 import Index from './pages/Index.vue';
+import Layout from './pages/Layout.vue';
 import 'ant-design-vue/dist/antd.css';
 import './index.css';
 
 const routes: RouteRecordRaw[] = [
     {
         path: '',
-        redirect: '/index',
+        redirect: '/layout',
     },
     {
         path: '/index',
         name: 'Index',
         component: Index,
+    },
+    {
+        path: '/layout',
+        name: 'Layout',
+        component: Layout,
     },
     {
         path: '/home',
