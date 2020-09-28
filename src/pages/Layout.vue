@@ -23,12 +23,11 @@
                 >
                     <a-sub-menu key="sub1">
                         <template #title>
-                            <span><user-outlined />subnav 1</span>
+                            <span><user-outlined />系统管理</span>
                         </template>
-                        <a-menu-item key="1">option1</a-menu-item>
-                        <a-menu-item key="2">option2</a-menu-item>
-                        <a-menu-item key="3">option3</a-menu-item>
-                        <a-menu-item key="4">option4</a-menu-item>
+                        <a-menu-item key="1">系统设置</a-menu-item>
+                        <a-menu-item key="2">权限管理</a-menu-item>
+                        <a-menu-item key="3">任务管理</a-menu-item>
                     </a-sub-menu>
                     <a-sub-menu key="sub2">
                         <template #title>
@@ -50,7 +49,7 @@
                     </a-sub-menu>
                 </a-menu>
             </a-layout-sider>
-            <a-layout style="padding: 0 24px 24px">
+            <a-layout style="padding: 0 24px 0 24px">
                 <a-breadcrumb style="margin: 16px 0">
                     <a-breadcrumb-item>Home</a-breadcrumb-item>
                     <a-breadcrumb-item>List</a-breadcrumb-item>
@@ -67,8 +66,9 @@
     </a-layout>
 </template>
 
-<script>
+<script lang="ts">
     import {UserOutlined, LaptopOutlined, NotificationOutlined} from '@ant-design/icons-vue';
+    import {ref} from 'vue';
 
     export default {
         name: 'Layout',
@@ -77,12 +77,17 @@
             LaptopOutlined,
             NotificationOutlined,
         },
-        data() {
+        setup() {
+            const selectedKeys1 = ref<string[]>(['1']);
+            const selectedKeys2 = ref<string[]>(['1']);
+            const openKeys = ref<string[]>(['sub1']);
+            const collapsed = ref<boolean>(false);
+
             return {
-                selectedKeys1: ['2'],
-                selectedKeys2: ['1'],
-                collapsed: false,
-                openKeys: ['sub1'],
+                selectedKeys1,
+                selectedKeys2,
+                collapsed,
+                openKeys,
             };
         },
     };

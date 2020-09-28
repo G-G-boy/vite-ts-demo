@@ -5,6 +5,9 @@ import store from './store';
 import App from './App.vue';
 import Index from './pages/Index.vue';
 import Layout from './pages/Layout.vue';
+import One from './pages/One.vue';
+import Two from './pages/Two.vue';
+import Three from './pages/Three.vue';
 import 'ant-design-vue/dist/antd.css';
 import './index.css';
 
@@ -22,6 +25,21 @@ const routes: RouteRecordRaw[] = [
         path: '/layout',
         name: 'Layout',
         component: Layout,
+    },
+    {
+        path: '/one',
+        name: 'One',
+        component: One,
+    },
+    {
+        path: '/two',
+        name: 'Two',
+        component: Two,
+    },
+    {
+        path: '/three',
+        name: 'Three',
+        component: Three,
     },
     {
         path: '/home',
