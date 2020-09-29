@@ -25,6 +25,24 @@ const routes: RouteRecordRaw[] = [
         path: '/layout',
         name: 'Layout',
         component: Layout,
+        children: [
+            {
+                path: '',
+                component: One,
+            },
+            {
+                path: 'one',
+                component: One,
+            },
+            {
+                path: 'two',
+                component: Two,
+            },
+            {
+                path: 'three',
+                component: Three,
+            },
+        ],
     },
     {
         path: '/one',
