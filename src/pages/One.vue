@@ -1,10 +1,15 @@
 <template>
-    <div>one</div>
+    <div>{{ a }}</div>
 </template>
 
-<script>
+<script lang="ts">
     export default {
         name: 'One',
+        setup() {
+            return {
+                a: import.meta.env.VITE_BASE_URL,
+            };
+        },
     };
 </script>
 
