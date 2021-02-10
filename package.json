@@ -12,7 +12,7 @@
   "dependencies": {
     "@ant-design/icons-vue": "^6.0.1",
     "ant-design-vue": "^2.0.0",
-    "vant": "^3.0.2",
+    "vant": "^3.0.6",
     "axios": "^0.21.1",
     "lodash": "^4.17.20",
     "moment": "^2.29.1",
