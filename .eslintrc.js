@@ -11,8 +11,6 @@ module.exports = {
         'plugin:vue/vue3-strongly-recommended',
         'airbnb-base',
         'prettier',
-        'prettier/vue',
-        'prettier/@typescript-eslint',
     ],
     parser: 'vue-eslint-parser',
     parserOptions: {
