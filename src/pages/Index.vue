@@ -27,58 +27,45 @@
     </div>
 </template>
 
-<script lang="ts">
-    import {ref, reactive, toRefs, computed, watch, watchEffect} from 'vue';
+<script lang="ts" setup>
+    import {ref, reactive, computed, watch, watchEffect} from 'vue';
     import {useRouter} from 'vue-router';
     import {useStore} from 'vuex';
 
-    export default {
-        name: 'Index',
-        setup() {
-            const store = useStore();
-            const router = useRouter();
-            const count = ref<number>(0);
-            const count2 = ref<{a: number}>({a: 1});
-            const count3 = reactive<{b: number; c: number}>({
-                b: 2,
-                c: 3,
-            });
+    const store = useStore();
+    const router = useRouter();
+    const count = ref<number>(0);
+    const count2 = ref<{a: number}>({a: 1});
+    const count3 = reactive<{b: number; c: number}>({
+        b: 2,
+        c: 3,
+    });
 
-            const time = ref<number>(new Date().getTime());
-            const add = () => {
-                count.value++;
-                count2.value.a++;
-                count3.b++;
-                count3.c++;
-            };
-
-            const changeTime = () => {
-                time.value = new Date().getTime();
-            };
-            watch(count, () => {
-                console.log('count的值改变了-----', count.value);
-            });
-            watchEffect(() => {
-                console.log('依赖变化了----', time.value, '--------', count.value);
-            });
-
-            const gotoHome = () => {
-                router.push({name: 'Home', path: '/home', query: {id: 666687}});
-            };
-            return {
-                count,
-                add,
-                count2,
-                count3,
-                ...toRefs(count3),
-                count4: computed(() => count.value ** 2),
-                time,
-                changeTime,
-                gotoHome,
-                storeCount: computed(() => store.state.count),
-            };
-        },
+    const time = ref<number>(new Date().getTime());
+    const add = () => {
+        count.value++;
+        count2.value.a++;
+        count3.b++;
+        count3.c++;
     };
+
+    const changeTime = () => {
+        time.value = new Date().getTime();
+    };
+    watch(count, () => {
+        console.log('count的值改变了-----', count.value);
+    });
+    watchEffect(() => {
+        console.log('依赖变化了----', time.value, '--------', count.value);
+    });
+
+    const gotoHome = () => {
+        router.push({name: 'Home', path: '/home', query: {id: 666687}});
+    };
+
+    const count4 = computed(() => count.value ** 2);
+
+    const storeCount = computed(() => store.state.count);
 </script>
 
 <style scoped></style>
