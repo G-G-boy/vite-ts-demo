@@ -1,9 +1,9 @@
 <template>
     <h1>this is home</h1>
-    <button @click="gotoIndex">go to Index</button>
+    <van-button @click="gotoIndex">go to Index</van-button>
     <h1>store.count:{{ count }}</h1>
-    <button @click="handleIncrement">增加</button>
-    <button @click="handleDecrement">减少</button>
+    <van-button @click="handleIncrement">增加</van-button>
+    <van-button @click="handleDecrement">减少</van-button>
 </template>
 
 <script lang="ts">
@@ -39,7 +39,7 @@
             const route = useRoute();
             console.log(route.query);
             const gotoIndex = () => {
-                router.push({path: '/'});
+                router.push({path: '/index'});
             };
 
             watchEffect((onInvalidate) => {

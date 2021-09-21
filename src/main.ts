@@ -3,8 +3,6 @@ import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router';
 import store from './store';
 import App from './App.vue';
 import Index from './pages/Index.vue';
-import 'ant-design-vue/dist/antd.css';
-import 'vant/lib/index.css';
 import './index.css';
 
 const routes: RouteRecordRaw[] = [
