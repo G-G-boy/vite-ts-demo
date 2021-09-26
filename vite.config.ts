@@ -1,13 +1,23 @@
 import vue from '@vitejs/plugin-vue';
 import {defineConfig} from 'vite';
 import path from 'path';
-import ViteComponents, {VantResolver} from 'vite-plugin-components';
+import Components from 'unplugin-vue-components/vite';
+import {VantResolver} from 'unplugin-vue-components/resolvers';
+import AutoImport from 'unplugin-auto-import/vite';
 
 export default defineConfig(() => ({
     plugins: [
         vue(),
-        ViteComponents({
-            customComponentResolvers: [VantResolver()],
+        Components({
+            dirs: ['src/components'],
+            dts: true,
+            resolvers: [VantResolver()],
+        }),
+        AutoImport({
+            include: [
+                /\.vue\??/, // .vue
+            ],
+            imports: ['vue', 'vue-router'],
         }),
     ],
     alias: {

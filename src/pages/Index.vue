@@ -28,8 +28,6 @@
 </template>
 
 <script lang="ts">
-    import {ref, reactive, toRefs, computed, watch, watchEffect} from 'vue';
-    import {useRouter} from 'vue-router';
     import {useStore} from 'vuex';
 
     export default {

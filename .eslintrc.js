@@ -34,6 +34,9 @@ module.exports = {
     rules: {
         'no-param-reassign': 'off',
         'no-plusplus': 'off',
+        'no-unused-vars': 'off',
+        'no-undef': 'off',
+        'no-console': 'off',
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
     },
