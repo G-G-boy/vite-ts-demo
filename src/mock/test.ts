@@ -1,5 +1,3 @@
-import {MockMethod} from 'vite-plugin-mock';
-
 export default [
     {
         url: '/api/get',
@@ -22,4 +20,4 @@ export default [
             },
         },
     },
-] as MockMethod[];
+];

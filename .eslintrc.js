@@ -41,3 +41,7 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
     },
 };
+
+// module.exports = {
+//     extends: ['@gavin-fabric/eslint-config-vue'],
+// };

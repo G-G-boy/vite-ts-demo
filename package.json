@@ -18,6 +18,8 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@gavin-fabric/eslint-config-vue": "^0.2.2",
+    "@gavin-fabric/prettier": "^0.0.5",
     "@types/lodash": "^4.14.173",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
@@ -33,6 +35,8 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^7.18.0",
     "husky": "4.3.8",
     "jest": "^27.2.1",
